@@ -13,14 +13,14 @@ inputs:
 - key: "AC_APPDOME_FUSION_SET_ID"
   defaultValue: "$AC_APPDOME_FUSION_SET_ID"
   isRequired: true
-  title: Fusion Set ID
-  description: "Fusion set ID"
+  title: Appdome Fusion Set ID
+  description: "Appdome Fusion set ID"
   helpText:
 - key: "AC_APPDOME_TEAM_ID"
   defaultValue: "$AC_APPDOME_TEAM_ID"
   isRequired: false
-  title: Team ID
-  description: "Team ID."
+  title: Appdome Team ID
+  description: "Appdome Team ID."
   helpText:
 - key: "AC_APPDOME_SIGN_METHOD"
   defaultValue: "On-Appdome"
