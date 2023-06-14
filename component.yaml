@@ -2,7 +2,6 @@ platform: Android
 buildPlatform:
 displayName: Appdome Build-2Secure
 description: "Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API"
-commit: 
 inputs:
 - key: "AC_APPDOME_APP_PATH"
   defaultValue: "$AC_APPDOME_APP_PATH"
