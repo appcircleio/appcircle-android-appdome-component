@@ -80,7 +80,7 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 "On-Appdome")			echo "On Appdome Signing"
-						keystore_file=$(download_file $AC_ANDROID_KEYSTORE_PATH)
+						keystore_file=$AC_ANDROID_KEYSTORE_PATH
 						keystore_pass=$AC_ANDROID_KEYSTORE_PASSWORD
 						keystore_alias=$AC_ANDROID_ALIAS
 						key_pass=$AC_ANDROID_ALIAS_PASSWORD

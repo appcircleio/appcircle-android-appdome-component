@@ -24,6 +24,7 @@ inputs:
 - key: "AC_APPDOME_SIGN_METHOD"
   defaultValue: "On-Appdome"
   isRequired: true
+  editorType: select
   title: Signing Method
   description: "App signing method."
   options: "On-Appdome,Private-Signing,Auto-Dev-Signing"
