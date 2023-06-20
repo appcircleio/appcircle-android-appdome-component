@@ -17,6 +17,6 @@ Integration that allows activating security and app protection features, buildin
 ## Output Variables
 
 - `AC_APPDOME_SECURED_APK_PATH`: Local path of the secured .apk file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
-- `AC_APPDOME_SECURED_ABB_PATH`: Local path of the secured .abb file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
+- `AC_APPDOME_SECURED_AAB_PATH`: Local path of the secured .aab file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
 - `AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH`: Local path of the .sh sign script file. Available when 'Signing Method' set to 'Auto-Dev-Signing
 - `AC_APPDOME_CERTIFICATE_PATH`: Local path of the Certified Secure Certificate .pdf file

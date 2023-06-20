@@ -106,6 +106,8 @@ if [[ $secured_app_output == *.sh ]]; then
 elif [[ $secured_app_output == *.apk ]]; then
 	echo "AC_APPDOME_SECURED_APK_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
 elif [[ $secured_app_output == *.aab ]]; then
-	echo "AC_APPDOME_SECURED_ABB_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
+	echo "AC_APPDOME_SECURED_AAB_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
+else
+	echo "Secured app output is undefined: $secured_app_output"
 fi
 echo "AC_APPDOME_CERTIFICATE_PATH=$certificate_output" >> $AC_ENV_FILE_PATH

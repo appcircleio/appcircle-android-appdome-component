@@ -50,9 +50,9 @@ outputs:
   title: "Secured .apk File Path"
   description: Local path of the secured .apk file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
   helpText:
-- key: "AC_APPDOME_SECURED_ABB_PATH"
-  title: "Secured .abb File Path"
-  description: Local path of the secured .abb file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
+- key: "AC_APPDOME_SECURED_AAB_PATH"
+  title: "Secured .aab File Path"
+  description: Local path of the secured .aab file. Available when 'Signing Method' set to 'On-Appdome' or 'Private-Signing'.
   helpText:
 - key: "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH"
   title: .sh Sign Script File Path
