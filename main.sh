@@ -101,6 +101,8 @@ case $AC_APPDOME_SIGN_METHOD in
 						;;
 esac
 
+cd ..
+
 if [[ $secured_app_output == *.sh ]]; then
 	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
 elif [[ $secured_app_output == *.apk ]]; then
