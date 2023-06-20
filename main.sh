@@ -30,8 +30,6 @@ if [[ -n $AC_APPDOME_TEAM_ID ]]; then
 fi
 
 git clone https://github.com/Appdome/appdome-api-bash.git > /dev/null
-cd appdome-api-bash
-
 echo "Android platform detected"
 
 cf=""
@@ -56,7 +54,7 @@ fi
 
 case $AC_APPDOME_SIGN_METHOD in
 "Private-Signing")		echo "Private Signing"
-						./appdome_api.sh --api_key $APPDOME_API_KEY \
+						./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -68,7 +66,7 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 "Auto-Dev-Signing")		echo "Auto Dev Signing"
-						./appdome_api.sh --api_key $APPDOME_API_KEY \
+						./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -84,7 +82,7 @@ case $AC_APPDOME_SIGN_METHOD in
 						keystore_pass=$AC_ANDROID_KEYSTORE_PASSWORD
 						keystore_alias=$AC_ANDROID_ALIAS
 						key_pass=$AC_ANDROID_ALIAS_PASSWORD
-						echo ./appdome_api.sh --api_key $APPDOME_API_KEY \
+						echo ./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -100,8 +98,6 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 esac
-
-cd ..
 
 if [[ $secured_app_output == *.sh ]]; then
 	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
