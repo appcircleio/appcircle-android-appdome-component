@@ -101,12 +101,11 @@ case $AC_APPDOME_SIGN_METHOD in
 						;;
 esac
 
-rm -rf appdome-api-bash
 if [[ $secured_app_output == *.sh ]]; then
 	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
 elif [[ $secured_app_output == *.apk ]]; then
-	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
-else
-	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
+	echo "AC_APPDOME_SECURED_APK_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
+elif [[ $secured_app_output == *.aab ]]; then
+	echo "AC_APPDOME_SECURED_ABB_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
 fi
 echo "AC_APPDOME_CERTIFICATE_PATH=$certificate_output" >> $AC_ENV_FILE_PATH
