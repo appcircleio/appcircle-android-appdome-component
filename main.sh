@@ -20,8 +20,8 @@ then
 else
 	app_file=$AC_APPDOME_APP_PATH
 fi
-certificate_output=$AC_REPOSITORY_DIR/certificate.pdf
-secured_app_output=$AC_REPOSITORY_DIR/Appdome_$(basename $app_file)
+certificate_output=../certificate.pdf
+secured_app_output=../Appdome_$(basename $app_file)
 
 
 tm=""
@@ -30,6 +30,8 @@ if [[ -n $AC_APPDOME_TEAM_ID ]]; then
 fi
 
 git clone https://github.com/Appdome/appdome-api-bash.git > /dev/null
+cd appdome-api-bash
+
 echo "Android platform detected"
 
 cf=""
@@ -54,7 +56,7 @@ fi
 
 case $AC_APPDOME_SIGN_METHOD in
 "Private-Signing")		echo "Private Signing"
-						./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
+						./appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -66,7 +68,7 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 "Auto-Dev-Signing")		echo "Auto Dev Signing"
-						./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
+						./appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -82,7 +84,7 @@ case $AC_APPDOME_SIGN_METHOD in
 						keystore_pass=$AC_ANDROID_KEYSTORE_PASSWORD
 						keystore_alias=$AC_ANDROID_ALIAS
 						key_pass=$AC_ANDROID_ALIAS_PASSWORD
-						echo ./appdome-api-bash/appdome_api.sh --api_key $APPDOME_API_KEY \
+						echo ./appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
@@ -98,6 +100,9 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 esac
+
+secured_app_output="$AC_REPOSITORY_DIR/$(basename $secured_app_output)"
+certificate_output="$AC_REPOSITORY_DIR/$(basename $certificate_output)"
 
 if [[ $secured_app_output == *.sh ]]; then
 	echo "AC_APPDOME_PRIVATE_SIGN_SCRIPT_PATH=$secured_app_output" >> $AC_ENV_FILE_PATH
