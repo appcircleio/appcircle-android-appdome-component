@@ -84,7 +84,7 @@ case $AC_APPDOME_SIGN_METHOD in
 						keystore_pass=$AC_ANDROID_KEYSTORE_PASSWORD
 						keystore_alias=$AC_ANDROID_ALIAS
 						key_pass=$AC_ANDROID_ALIAS_PASSWORD
-						echo ./appdome_api.sh --api_key $APPDOME_API_KEY \
+						./appdome_api.sh --api_key $APPDOME_API_KEY \
 							--app $app_file \
 							--fusion_set_id $AC_APPDOME_FUSION_SET_ID \
 							$tm \
