@@ -29,7 +29,7 @@ if [[ -n $AC_APPDOME_TEAM_ID ]]; then
 	tm="--team_id ${team_id}"
 fi
 
-mv "$AC_ANDROID_KEYSTORE_PATH" "$AC_ANDROID_KEYSTORE_PATH.keystore"
+cp "$AC_ANDROID_KEYSTORE_PATH" "$AC_ANDROID_KEYSTORE_PATH.keystore"
 
 git clone https://github.com/Appdome/appdome-api-bash.git > /dev/null
 cd appdome-api-bash
