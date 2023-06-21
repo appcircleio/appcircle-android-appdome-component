@@ -1,6 +1,8 @@
 #!/bin/bash
 set -e
 
+mv "$AC_ANDROID_KEYSTORE_PATH" "$AC_ANDROID_KEYSTORE_PATH.keystore"
+
 download_file() {
 	file_location=$1
 	uri=$(echo $file_location | awk -F "?" '{print $1}')
@@ -80,7 +82,7 @@ case $AC_APPDOME_SIGN_METHOD in
 							--certificate_output $certificate_output 
 						;;
 "On-Appdome")			echo "On Appdome Signing"
-						keystore_file="$AC_ANDROID_KEYSTORE_PATH.keystore"
+						keystore_file=$AC_ANDROID_KEYSTORE_PATH
 						keystore_pass=$AC_ANDROID_KEYSTORE_PASSWORD
 						keystore_alias=$AC_ANDROID_ALIAS
 						key_pass=$AC_ANDROID_ALIAS_PASSWORD
