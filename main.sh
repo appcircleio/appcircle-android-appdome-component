@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 download_file() {
 	file_location=$1
