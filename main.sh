@@ -1,5 +1,5 @@
 #!/bin/bash
-set -ex
+set -e
 
 APPDOME_APP_PATH=$AC_APPDOME_APP_PATH
 APPDOME_API_KEY=$AC_APPDOME_API_KEY
