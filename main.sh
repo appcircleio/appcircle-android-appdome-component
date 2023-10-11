@@ -32,6 +32,10 @@ if [[ -n $APPDOME_TEAM_ID ]]; then
 	tm="--team_id ${team_id}"
 fi
 
+if [[ -z $ANDROID_KEYSTORE_PATH ]]; then
+ 	echo 'ANDROID_KEYSTORE_PATH must be provided. Please select a keystore from Configuration for Signing. Exiting.'
+ 	exit 1
+fi
 cp "$ANDROID_KEYSTORE_PATH" "$ANDROID_KEYSTORE_PATH.keystore"
 
 git clone https://github.com/Appdome/appdome-api-bash.git > /dev/null
