@@ -20,12 +20,12 @@ download_file() {
 
 if [[ $APPDOME_APP_PATH == *"http"* ]];
 then
-	app_file=AC_REPOSITORY_DIR/$(download_file $APPDOME_APP_PATH)
+	app_file=$AC_REPOSITORY_DIR/$(download_file $APPDOME_APP_PATH)
 else
 	app_file=$APPDOME_APP_PATH
 fi
-certificate_output=AC_REPOSITORY_DIR/certificate.pdf
-secured_app_output=AC_REPOSITORY_DIR/Appdome_$(basename $app_file)
+certificate_output=$AC_REPOSITORY_DIR/certificate.pdf
+secured_app_output=$AC_REPOSITORY_DIR/Appdome_$(basename $app_file)
 
 tm=""
 if [[ -n $APPDOME_TEAM_ID ]]; then
