@@ -1,4 +1,4 @@
-# Appcircle _Appdome Build-2Secure for Android_ component
+# Appcircle _Appdome Build-to-Secure for Android_ component
 
 Integration that allows activating security and app protection features, building and signing mobile apps using Appdome's API
 
