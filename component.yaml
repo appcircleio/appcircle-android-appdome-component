@@ -71,7 +71,7 @@ outputs:
   defaultValue: "$AC_APPDOME_CERTIFICATE_PATH"
   title: Certified Secure Certificate .pdf file path
   description: "Local path of the Certified Secure Certificate .pdf file."
-  helpText:  
+  helpText:
 processFilename: bash
 processArguments: '%AC_STEP_TEMP%/main.sh'
 files:
