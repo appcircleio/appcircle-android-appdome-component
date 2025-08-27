@@ -29,7 +29,7 @@ secured_app_output=$AC_REPOSITORY_DIR/Appdome_$(basename $app_file)
 
 tm=""
 if [[ -n $APPDOME_TEAM_ID ]]; then
-	tm="--team_id ${team_id}"
+	tm="--team_id ${APPDOME_TEAM_ID}"
 fi
 
 if [[ -z $ANDROID_KEYSTORE_PATH ]]; then
