@@ -11,11 +11,11 @@ APPDOME_BUILD_LOGS="$AC_APPDOME_BUILD_LOGS"
 ANDROID_KEYSTORE_PATH="$AC_ANDROID_KEYSTORE_PATH"
 
 download_file() {
-	file_location="$1"
-	uri=$(echo "$file_location" | awk -F "?" '{print $1}')
-	echo "$file_location"
-	downloaded_file=$(basename "$uri")
-	curl -L "$file_location" --output "$downloaded_file" && echo "$downloaded_file"
+	file_location=$1
+	uri=$(echo $file_location | awk -F "?" '{print $1}')
+	echo $file_location
+	downloaded_file=$(basename $uri)
+	curl -L $file_location --output $downloaded_file && echo $downloaded_file
 }
 
 if [[ "$APPDOME_APP_PATH" == *"http"* ]];
