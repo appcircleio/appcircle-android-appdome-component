@@ -48,7 +48,6 @@ inputs:
   isRequired: false
   title: Google Play App Signing Fingerprint
   description: "Fingerprint of the Google Play App Signing certificate. Required when Google Play Signing is enabled. Define this value as a secret under the Environment Variables section."
-  options: "true,false"
   helpText:
 - key: "AC_APPDOME_BUILD_LOGS"
   defaultValue: "false"
